@@ -41,3 +41,5 @@ l
 <src/main/java/com/sermaluc/config/ClaveValidaProperties.java,f/7/f7935792234bce16804d073f3f3197c46da96a8d
 k
 ;src/main/java/com/sermaluc/config/OpenApiConfiguration.java,b/0/b00da572622444d1a1b1ea868e07d4fbbe06f0a6
+9
+	Readme.md,0/c/0c1945d7443c2e154bd3e421c0d438bd4086d8c3

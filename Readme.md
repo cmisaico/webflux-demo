@@ -81,7 +81,14 @@ http://localhost:8008/swagger-ui/webjars/swagger-ui/index.html
 
 ## Diagrama de Solucion
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+
+![Descripción de la imagen](/src/main/resources/images/sermaluc-service-solution.png "Diagrama de Solucion")
+
+- En el siguiente enlace se encuentra el diagrama de solucion de la aplicacion [Diagrama de Solucion](https://drive.google.com/file/d/1LVpS_XGuvJDCLw0sGrcgeF9VjIL1WlMU/view?usp=sharing)
+
+[Visita mi Sitio Web](https://www.ejemplo.com)
 
 
 ## Authors
