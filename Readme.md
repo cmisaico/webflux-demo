@@ -66,7 +66,7 @@ curl --location 'http://localhost:8008/api/user/create' \
 
 - Tener instalado Postman
 
-- Importar los collections _**Sermaluc.postman_collection.json**_ que se encuentra en la carpeta de resources del proyecto clonado y ejecutar las prueba.
+- Importar los collections _**Sermaluc.postman_collection.json**_ que se encuentra en la carpeta _resources/postman_ del proyecto clonado y luego ejecutar la prueba.
 
 
 
@@ -74,7 +74,7 @@ curl --location 'http://localhost:8008/api/user/create' \
 
 ## API de Referencia - Swagger
 
-Entrar el enlance donde se visualizara la api en swagger.
+Cuando el aplcativo se encuentre en ejeucion puede entrar al siguiente enlance donde se visualizara la api en swagger.
 ```
 http://localhost:8008/swagger-ui/webjars/swagger-ui/index.html
 ```
