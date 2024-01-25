@@ -88,9 +88,7 @@ http://localhost:8008/swagger-ui/webjars/swagger-ui/index.html
 
 - En el siguiente enlace se encuentra el diagrama de solucion de la aplicacion [Diagrama de Solucion](https://drive.google.com/file/d/1LVpS_XGuvJDCLw0sGrcgeF9VjIL1WlMU/view?usp=sharing)
 
-[Visita mi Sitio Web](https://www.ejemplo.com)
 
-
-## Authors
+## Autor
 
 - Christian Misaico
