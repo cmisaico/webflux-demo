@@ -75,7 +75,7 @@ curl --location 'http://localhost:8008/api/user/create' \
 ## API de Referencia - Swagger
 
 Entrar el enlance donde se visualizara la api en swagger.
-```http
+```
 http://localhost:8008/swagger-ui/webjars/swagger-ui/index.html
 ```
 
