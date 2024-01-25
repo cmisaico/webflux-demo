@@ -35,3 +35,9 @@ _
 /src/main/java/com/sermaluc/helpers/JwtUtil.java,a/5/a59197fc6f5e632cdc41fa7e5a388388ba78b011
 o
 ?src/main/java/com/sermaluc/handlers/GlobalExceptionHandler.java,c/0/c03b0057ceefa185c698bd840aa6070b02b5935d
+m
+=src/main/java/com/sermaluc/controllers/UsuarioController.java,8/0/80132cc01ccb340fa89ce89525739e40140f5499
+l
+<src/main/java/com/sermaluc/config/ClaveValidaProperties.java,f/7/f7935792234bce16804d073f3f3197c46da96a8d
+k
+;src/main/java/com/sermaluc/config/OpenApiConfiguration.java,b/0/b00da572622444d1a1b1ea868e07d4fbbe06f0a6
