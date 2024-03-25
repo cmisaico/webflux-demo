@@ -41,3 +41,13 @@ k
 ;src/main/java/com/sermaluc/config/OpenApiConfiguration.java,b/0/b00da572622444d1a1b1ea868e07d4fbbe06f0a6
 9
 	Readme.md,0/c/0c1945d7443c2e154bd3e421c0d438bd4086d8c3
+l
+<src/test/java/com/sermaluc/SermalucDemoApplicationTests.java,d/0/d013f0a5c592873e1f0122aabac309f69c71d8f2
+n
+>src/main/java/com/sermaluc/exceptions/EmailExistException.java,7/4/7460dd6cd6ccdd69310168bc12e6be76145c5831
+]
+-src/main/java/com/sermaluc/entities/User.java,f/b/fbba47c740786b002915fc4fc9e9cf2f9fbf10e6
+b
+2src/main/java/com/sermaluc/entities/TokenInfo.java,c/9/c95ce5191b9d1070b1c863c5f5fb82e57cd75a76
+^
+.src/main/java/com/sermaluc/entities/Phone.java,e/7/e7f0b56551551a0d411e4ffcf55910bb256e0a24
