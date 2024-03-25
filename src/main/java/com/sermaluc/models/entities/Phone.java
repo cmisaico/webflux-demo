@@ -1,4 +1,4 @@
-package com.sermaluc.entities;
+package com.sermaluc.models.entities;
 
 
 import jakarta.persistence.Entity;

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sermaluc-demo.iml" filepath="$PROJECT_DIR$/.idea/modules/sermaluc-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sermaluc-demo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sermaluc-demo.main.iml" />
     </modules>
   </component>
 </project>

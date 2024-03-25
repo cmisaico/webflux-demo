@@ -1,12 +1,11 @@
 package com.sermaluc.controllers;
 
-import com.sermaluc.models.UserRequestDTO;
-import com.sermaluc.models.UserResponseDTO;
+import com.sermaluc.models.dtos.UserRequestDTO;
+import com.sermaluc.models.dtos.UserResponseDTO;
 import com.sermaluc.services.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
-import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

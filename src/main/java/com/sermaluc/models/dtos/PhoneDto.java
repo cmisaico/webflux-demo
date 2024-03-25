@@ -1,4 +1,4 @@
-package com.sermaluc.models;
+package com.sermaluc.models.dtos;
 
 import lombok.Builder;
 import lombok.Data;

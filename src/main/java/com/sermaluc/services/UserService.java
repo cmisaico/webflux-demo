@@ -1,7 +1,7 @@
 package com.sermaluc.services;
 
-import com.sermaluc.models.UserRequestDTO;
-import com.sermaluc.models.UserResponseDTO;
+import com.sermaluc.models.dtos.UserRequestDTO;
+import com.sermaluc.models.dtos.UserResponseDTO;
 import reactor.core.publisher.Mono;
 
 public interface UserService {

@@ -1,4 +1,4 @@
-package com.sermaluc.handlers;
+package com.sermaluc.handlers.exceptions;
 
 import com.sermaluc.exceptions.EmailExistException;
 import jakarta.validation.ConstraintViolation;
@@ -18,16 +18,17 @@ import java.util.*;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+
     @ExceptionHandler(EmailExistException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     protected ResponseEntity<Object> handleMethodArgumentNotValid(EmailExistException ex) {
         Map<String, String> errorMap = new HashMap<>();
         errorMap.put("mensaje", ex.getMessage());
         return new ResponseEntity<>(errorMap, new HttpHeaders(), HttpStatus.BAD_REQUEST);
     }
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex) {
         List<String> errors = ex.getBindingResult().getFieldErrors().stream()
                 .map(FieldError::getDefaultMessage)
@@ -36,6 +37,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(WebExchangeBindException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<Object> handleException(WebExchangeBindException ex) {
         List<String> errors = ex.getBindingResult()
                 .getAllErrors()
@@ -46,8 +48,8 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(getErrorsMap(errors), new HttpHeaders(), HttpStatus.BAD_REQUEST);
     }
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(ConstraintViolationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<Map<String, List<String>>> handleValidationErrors(ConstraintViolationException ex) {
         List<String> errors = ex.getConstraintViolations()
                                 .stream().map(ConstraintViolation::getMessage).toList();
@@ -56,6 +58,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(RuntimeException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public final ResponseEntity<Object> handleRuntimeExceptions(RuntimeException ex) {
         List<String> errors = Collections.singletonList(ex.getMessage());
         return new ResponseEntity<>(getErrorsMap(errors), new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);

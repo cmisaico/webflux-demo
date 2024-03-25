@@ -1,10 +1,11 @@
-package com.sermaluc.entities;
+package com.sermaluc.models.entities;
 
-import com.sermaluc.valids.ClaveValida;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -16,6 +17,8 @@ import java.util.UUID;
 @Data
 @Builder
 @Table(name = "users")
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id

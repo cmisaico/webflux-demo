@@ -2,7 +2,7 @@ package com.sermaluc.helpers;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.sermaluc.models.TokenInfoDTO;
+import com.sermaluc.models.dtos.TokenInfoDTO;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -13,7 +13,9 @@ public class JwtUtil {
     private static String secretKey = "s3rm41uc";
     private static Algorithm algorithm = Algorithm.HMAC256(secretKey);
 
-    public TokenInfoDTO create(String username){
+    private JwtUtil() {}
+
+    public static TokenInfoDTO create(String username){
         TokenInfoDTO tokenInfoDTO = new TokenInfoDTO();
         tokenInfoDTO.setExpirationDate(new Date(System.currentTimeMillis() + TimeUnit.DAYS.toMillis(15)));
         tokenInfoDTO.setToken(JWT.create()

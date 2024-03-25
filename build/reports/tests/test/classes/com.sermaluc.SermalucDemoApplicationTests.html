@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.522s</div>
+<div class="counter">0.812s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,9 +66,6 @@
 <li>
 <a href="#tab1">Standard output</a>
 </li>
-<li>
-<a href="#tab2">Standard error</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -82,17 +79,17 @@
 </thead>
 <tr>
 <td class="success">crearUserTest()</td>
-<td class="success">0.335s</td>
+<td class="success">0.160s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">createUsuarioErrorTest()</td>
-<td class="success">1.170s</td>
+<td class="success">0.638s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">existeEmailTest()</td>
-<td class="success">0.017s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -100,8 +97,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>09:57:57.546 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.sermaluc.SermalucDemoApplicationTests]: SermalucDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-09:57:57.719 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.sermaluc.SermalucDemoApplication for test class com.sermaluc.SermalucDemoApplicationTests
+<pre>16:25:18.180 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.sermaluc.SermalucDemoApplicationTests]: SermalucDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:25:18.247 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.sermaluc.SermalucDemoApplication for test class com.sermaluc.SermalucDemoApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -111,44 +108,24 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.2)
 
-2024-03-25T09:57:58.381-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] c.sermaluc.SermalucDemoApplicationTests  : Starting SermalucDemoApplicationTests using Java 17.0.9 with PID 10346 (started by cmisaico in /home/cmisaico/Documents/Proyectos/sermaluc/sermaluc-demo)
-2024-03-25T09:57:58.383-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] c.sermaluc.SermalucDemoApplicationTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-03-25T09:57:59.497-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-25T09:57:59.759-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 246 ms. Found 1 JPA repository interface.
-2024-03-25T09:58:00.825-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-03-25T09:58:00.845-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-25T09:58:00.845-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
-2024-03-25T09:58:00.929-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-25T09:58:00.930-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2514 ms
-2024-03-25T09:58:00.962-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-25T09:58:01.366-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2024-03-25T09:58:01.367-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-25T09:58:01.383-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2024-03-25T09:58:01.635-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-25T09:58:01.735-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-03-25T09:58:01.790-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-03-25T09:58:02.120-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-25T09:58:02.189-05:00  WARN 10346 --- [sermaluc-demo-service] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-03-25T09:58:03.123-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.sermaluc.entities.Phone (class must be instantiated by Interceptor)
-2024-03-25T09:58:03.179-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.sermaluc.entities.User (class must be instantiated by Interceptor)
-2024-03-25T09:58:03.188-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.sermaluc.entities.TokenInfo (class must be instantiated by Interceptor)
-2024-03-25T09:58:03.405-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-25T09:58:03.447-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-25T09:58:03.920-05:00  WARN 10346 --- [sermaluc-demo-service] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-25T09:58:04.445-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 37931 (http) with context path ''
-2024-03-25T09:58:04.457-05:00  INFO 10346 --- [sermaluc-demo-service] [    Test worker] c.sermaluc.SermalucDemoApplicationTests  : Started SermalucDemoApplicationTests in 6.509 seconds (process running for 8.327)
-2024-03-25T09:58:05.670-05:00  INFO 10346 --- [sermaluc-demo-service] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-25T09:58:05.671-05:00  INFO 10346 --- [sermaluc-demo-service] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-25T09:58:05.672-05:00  INFO 10346 --- [sermaluc-demo-service] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-</pre>
-</span>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>[2024.03.25 09:57:57] (Coverage): Error during class instrumentation: org.springframework.boot.logging.log4j2.Log4J2LoggingSystem: java.lang.RuntimeException: java.io.IOException: Class org/apache/logging/log4j/core/config/composite/CompositeConfiguration not found
-[2024.03.25 09:58:04] (Coverage): Error during class instrumentation: org.springframework.http.client.HttpComponentsClientHttpRequestFactory: java.lang.RuntimeException: java.io.IOException: Class org/apache/hc/client5/http/protocol/HttpClientContext not found
-[2024.03.25 09:58:06] (Coverage): Error during class instrumentation: org.h2.value.ValueToObjectConverter: java.lang.RuntimeException: java.io.IOException: Class org/locationtech/jts/geom/Geometry not found
+2024-03-25T16:25:18.451-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] c.sermaluc.SermalucDemoApplicationTests  : Starting SermalucDemoApplicationTests using Java 17.0.9 with PID 34653 (started by cmisaico in /home/cmisaico/Documents/Proyectos/sermaluc/sermaluc-demo)
+2024-03-25T16:25:18.452-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] c.sermaluc.SermalucDemoApplicationTests  : The following 1 profile is active: &quot;dev&quot;
+2024-03-25T16:25:18.810-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-25T16:25:18.892-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2024-03-25T16:25:19.166-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-25T16:25:19.262-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-03-25T16:25:19.263-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-25T16:25:19.324-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-25T16:25:19.351-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-03-25T16:25:19.369-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-25T16:25:19.494-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-25T16:25:19.517-05:00  WARN 34653 --- [sermaluc-demo-service] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-25T16:25:19.941-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.sermaluc.models.entities.Phone (class must be instantiated by Interceptor)
+2024-03-25T16:25:19.966-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.sermaluc.models.entities.TokenInfo (class must be instantiated by Interceptor)
+2024-03-25T16:25:20.087-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-25T16:25:20.110-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-25T16:25:20.666-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 38681
+2024-03-25T16:25:20.679-05:00  INFO 34653 --- [sermaluc-demo-service] [    Test worker] c.sermaluc.SermalucDemoApplicationTests  : Started SermalucDemoApplicationTests in 2.357 seconds (process running for 3.048)
 </pre>
 </span>
 </div>
@@ -160,7 +137,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at Mar 25, 2024, 9:58:08 AM</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at Mar 25, 2024, 4:25:23 PM</p>
 </div>
 </div>
 </body>

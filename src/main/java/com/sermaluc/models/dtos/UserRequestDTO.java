@@ -1,11 +1,9 @@
-package com.sermaluc.models;
+package com.sermaluc.models.dtos;
 
-import com.sermaluc.entities.Phone;
 import com.sermaluc.valids.ClaveValida;
 import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.List;
 

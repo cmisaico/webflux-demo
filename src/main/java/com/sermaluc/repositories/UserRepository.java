@@ -1,6 +1,6 @@
 package com.sermaluc.repositories;
 
-import com.sermaluc.entities.User;
+import com.sermaluc.models.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
