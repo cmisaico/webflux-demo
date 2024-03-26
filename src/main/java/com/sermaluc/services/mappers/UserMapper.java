@@ -23,6 +23,7 @@ public interface UserMapper {
     User map(UserRequestDTO userRequestDto);
 
     @Mapping(target = "id", ignore = true )
+    @Mapping(target = "user", ignore = true)
     Phone map(PhoneDto phoneDto);
 
     @Mapping(target = "lastLogin", expression = "java(userEntity.getLastLogin().format(java.time.format.DateTimeFormatter.ofPattern(\"yyyy-MM-dd'T'HH:mm:ss\")))")

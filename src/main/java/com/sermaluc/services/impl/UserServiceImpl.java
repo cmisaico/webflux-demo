@@ -1,12 +1,9 @@
 package com.sermaluc.services.impl;
 
 import com.sermaluc.helpers.JwtUtil;
-import com.sermaluc.models.dtos.PhoneDto;
-import com.sermaluc.models.entities.Phone;
 import com.sermaluc.models.entities.TokenInfo;
 import com.sermaluc.models.entities.User;
 import com.sermaluc.exceptions.EmailExistException;
-import com.sermaluc.helpers.DateUtil;
 import com.sermaluc.models.dtos.TokenInfoDTO;
 import com.sermaluc.models.dtos.UserRequestDTO;
 import com.sermaluc.models.dtos.UserResponseDTO;
@@ -16,9 +13,8 @@ import com.sermaluc.services.mappers.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import java.time.LocalDateTime;
-import java.util.stream.Stream;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -38,18 +34,22 @@ public class UserServiceImpl implements UserService {
         }
         TokenInfoDTO jwt = JwtUtil.create(userDto.getEmail());
 
-        return Mono.just(userDto)
-                .map(UserMapper.INSTANCE::map)
-                .map(user -> {
-                    user.setTokenInfo(TokenInfo.builder()
-                            .token(jwt.getToken())
-                            .expirationDate(jwt.getExpirationDate()).build()
-                    );
-                    return user;
-                })
-                .map(userRepository::save)
+        User user = UserMapper.INSTANCE.map(userDto);
+        user.getPhones().forEach(phone -> phone.setUser(user));
+        user.setTokenInfo(TokenInfo.builder()
+                .token(jwt.getToken())
+                .expirationDate(jwt.getExpirationDate())
+                .user(user).build()
+        );
+        User nuevoUser = userRepository.save(user);
+        return Mono.just(nuevoUser)
                 .map(UserMapper.INSTANCE::map);
+    }
 
+    @Override
+    public Flux<UserResponseDTO> findAll() {
+        return Flux.fromIterable(userRepository.findAll().stream().
+                map(UserMapper.INSTANCE::map).toList());
     }
 
 }

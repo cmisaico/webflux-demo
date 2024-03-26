@@ -11,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import java.net.URI;
 
@@ -36,11 +37,12 @@ public class UsuarioController {
             }
     )
     @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Mono<ResponseEntity<UserResponseDTO>> create(@Valid @RequestBody UserRequestDTO userRegisterReqMono) {
-        return userService.save(userRegisterReqMono)
-                .map(m -> ResponseEntity
-                        .created(URI.create("/api/user/create/" + m.getId()))
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .body(m));
+    public Mono<UserResponseDTO> create(@Valid @RequestBody UserRequestDTO userRegisterReqMono) {
+        return userService.save(userRegisterReqMono);
+    }
+
+    @GetMapping(value = "/list", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Flux<UserResponseDTO> findAll() {
+        return userService.findAll();
     }
 }

@@ -24,6 +24,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @GenericGenerator(name = "UUID")
+    @Column(name = "id")
     private UUID id;
 
     @NotBlank(message = "{user.nombre.vacio}")
@@ -39,7 +40,7 @@ public class User {
     private String password;
 
     @NotNull(message = "{user.telefonos.vacio}")
-    @OneToMany(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Phone> phones;
 
     @CreationTimestamp
